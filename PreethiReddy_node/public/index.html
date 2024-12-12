@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PR</title>
+    <style>
+        body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #18151533;
+    text-align: justify;
+    margin-top: 50px;
+}
+
+header {
+    overflow: hidden;         
+    font-size: 25px;
+    font-weight: 500;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000; /* Ensure header is on top */
+}
+
+header .logo {
+    float: left;   
+}
+
+header a {
+    float: right;             
+    display: block;           
+    color: #000000;          
+    text-align: center;       
+    padding: 14px 16px;       
+    text-decoration: none; 
+}
+
+.title {
+    font-size: 25px;
+    margin: 25px 0px 20px 0px;
+    text-align: left;
+}
+
+main {
+    margin: 10px 200px;
+    padding-top: 70px; /* Adjust for fixed header */
+}
+
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns layout */
+    column-gap: 20px;
+}
+
+.profile {
+    margin-top: 20px;
+}
+
+.profile img {
+    width: 200px; 
+    height: auto; 
+    border-radius: 15px; 
+}
+
+.profile .text {
+    margin-top: 13px; 
+    font-size: 16px; 
+}
+
+.about {
+    overflow: hidden; /* Clear floats */
+}
+
+.about h3 {
+    font-size: 20px;
+    margin-top: 10;
+}
+
+.about p {
+    font-size: 19px;   
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+#about-skills {
+    font-size: 15px;   
+    line-height: 30px;
+}
+
+.projects-grid, .schools-grid, .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.project, .school, .blog { 
+    max-width: 400px; /* Extend width for projects, schools, and blogs */
+    padding: 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.project {
+    background-color: #ee2f6b30;
+}
+
+.project-content {
+    overflow: hidden;
+}
+
+.project-image {
+    width: 120px;
+    height: 90px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 15px;
+}
+
+.project-name {
+    font-size: 20px;    
+}
+
+.project-description {
+    font-size: 20px;   
+    line-height: 18px;
+    margin: 15px 0px;
+    text-align: left;
+}
+
+.project-learn-more {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #ffffffa0;
+    font-size: 20px;
+}
+
+.company { 
+    background-color: #ee2f6b30;
+    border-radius: 12px;
+    margin-bottom: 20px;    
+}
+
+.company-description {
+    font-size: 19px;   
+    line-height: 25px;
+}
+
+.school { 
+    background-color: #ee2f6b30;
+}
+
+.school-image {
+    width: 125px;
+    height: 125px;
+    border-radius: 90px;
+    float: left;
+    margin-right: 20px;
+}
+
+.school-name {
+    font-size: 30px;  
+    margin-bottom: 15px; 
+}
+
+.school-description {
+    font-size: 20px;   
+    line-height: 25px;
+}
+
+.blog { 
+    background-color: #ee2f6b30;
+    overflow: hidden;
+    text-align: left;
+}
+
+.blog-image {
+    display: block;
+    height: 90px;
+    width: 120px;
+}
+
+.blog-title {
+    font-size: 19px;
+    margin: 20px;
+}
+
+.blog-content {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 10px 20px 20px 20px;
+}
+
+#contact-container {
+    text-align: center;
+    padding: 30px 0 60px 0; 
+}
+
+.contact-image {
+    height: 30px;    
+    width: 30px; 
+    padding: 0 5px; 
+}
+footer {
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Set the font size */
+    padding: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 500px) {
+    main {
+        margin: 10px; /* Full width on small screens */
+    }
+
+    header a {
+        float: none; /* Stack navigation links */
+        text-align: center; /* Center text for smaller screens */
+        padding: 10px 0; /* Adjust padding */
+    }
+
+    .projects-grid, .blogs-grid {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    .project, .blog, .school {
+        margin: 10px 0; /* Add margin for spacing */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .project-name, .blog-title {
+        font-size: 18px; /* Slightly smaller font size */
+    }
+
+    .project-description, .blog-content {
+        font-size: 14px; /* Smaller font size for better readability */
+        line-height: 1.4; /* Adjust line height for readability */
+    }
+
+    .contact-image {
+        height: 25px; /* Adjust icon size */
+        width: 25px; 
+    }
+}
+
+/* Ensure correct scroll behavior */
+section[id] {
+    scroll-margin-top: 70px; /* Prevent sections from hiding under fixed header */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#aboutme">About Me</a>
+        </nav>
+        <a class="logo" href="#">PR</a>
+    </header>
+    <main>
+        <section id="aboutme" class="container">
+            <div class="profile">
+                <img src="https://i.ibb.co/zShydyR/women.png" alt="women">
+                <p class="text"><b>PREETHI REDDY</b></p>
+            </div>
+            <div class="about">
+                <h3>About Me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p id="about-skills">• Skill1 • Skill2 • Skill3 • Skill4</p>
+            </div>
+        </section>
+
+        <article id="projects">
+            <h2 class="title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-content">
+                        <img class="project-image" src="https://i.ibb.co/VpQ5vkH/proj1.png" alt="proj1">
+                        <p class="project-name"><b>Name</b></p>
+                    </div>
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="https://google.com" target="_blank" class="project-learn-more">Learn More</a>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <img class="project-image" src="https://i.ibb.co/Lrj0X5b/proj-2.png" alt="proj-2">
+                        <p class="project-name"><b>Name</b></p>
+                    </div>
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="https://google.com" target="_blank" class="project-learn-more">Learn More</a>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <img class="project-image" src="https://i.ibb.co/7Qk1Z4b/proj3.png" alt="proj3">
+                        <p class="project-name"><b>Name</b></p>
+                    </div>
+                    <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="https://google.com" target="_blank" class="project-learn-more">Learn More</a>
+                </div>
+            </div>
+        </article>
+
+        <article id="experience">
+            <h2 class="title">Experience</h2>
+            <div class="company">
+                <p class="company-description">• Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                • Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                • Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                • Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                • Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+        </article>
+
+        <article id="education">
+            <h2 class="title">Education</h2>
+            <div class="schools-grid">
+                <div class="school">
+                    <img class="school-image" src="https://i.ibb.co/BGrmC32/uni-1.png" alt="uni-1">
+                    <div class="school-content">
+                        <p class="school-name">University</p>
+                        <p class="school-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="school">
+                    <img class="school-image" src="https://i.ibb.co/vY1dKqk/uni-2.png" alt="uni-2">
+                    <div class="school-content">
+                        <p class="school-name">University</p>
+                        <p class="school-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article id="blogs">
+            <h2 class="title">Blogs</h2>
+            <div class="blogs-grid">
+                <div class="blog">
+                    <img class="blog-image" src="https://i.ibb.co/1swLJRQ/blog-1.png" alt="blog-1">
+                    <p class="blog-title"><b>This Blog is about tech</b></p>
+                    <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="blog">
+                    <img class="blog-image" src="https://i.ibb.co/kKzXzFt/blog-2.png" alt="blog-2">
+                    <p class="blog-title"><b>This Blog is about tech</b></p>
+                    <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="blog">
+                    <img class="blog-image" src="https://i.ibb.co/Rp6RrqM/blog-3.png" alt="blog-3">
+                    <p class="blog-title"><b>This Blog is about tech</b></p>
+                    <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </article>
+
+        <article id="contact">
+            <h2 class="title">Contact</h2>
+            <div id="contact-container">
+                <a href="https://www.google.com/" target="_blank"><img class="contact-image" src="https://i.ibb.co/WVP9dMg/email.png" alt="email"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img class="contact-image" src="https://i.ibb.co/f47DZgR/LinkedIN.png" alt="LinkedIn Image"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img class="contact-image" src="https://i.ibb.co/Ln3SjcT/Twitter.png" alt="Twitter Image"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img class="contact-image" src="https://i.ibb.co/NK4t2fC/Facebook.png" alt="Facebook Image"></a>
+                <a href="https://www.github.com/" target="_blank"><img class="contact-image" src="https://i.ibb.co/ygNK7HH/Github.png" alt="Github Image"></a>
+            </div>
+        </article>
+    </main>
+    <footer>
+                        <p>&copy; 2024 PREETHI REDDY. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

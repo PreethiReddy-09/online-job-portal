@@ -1,0 +1,63 @@
+{
+  "jobs": [
+    {
+        "job_title": "Backend Developer",
+      "description": "The role will involve developing and maintaining server-side logic, database integration, and ensuring high performance and responsiveness of applications.",
+      "location": "Austin, Texas",
+      "department": "IT",
+      "salary": "$95k-$130k",
+      "role": "Software Developer",
+      "experience": "2-4 years",
+      "company_name": "TechSphere Inc."
+    },
+    {
+      "job_title": "Front-End Engineer",
+      "description": "The role focuses on developing visually appealing user interfaces and ensuring the best possible user experience across devices.",
+      "location": "Seattle, Washington",
+      "department": "IT",
+      "salary": "$80k-$115k",
+      "role": "Software Developer",
+      "experience": "1-3 years",
+      "company_name": "CodeCrafters LLC"
+    },
+    {
+      "job_title": "Cloud Solutions Architect",
+      "description": "Responsible for designing and implementing scalable, secure cloud infrastructure to support business needs.",
+      "location": "New York City, New York",
+      "department": "IT",
+      "salary": "$120k-$160k",
+      "role": "Cloud Engineer",
+      "experience": "5+ years",
+      "company_name": "SkyLine Technologies"
+    },
+    {
+      "job_title": "Mobile App Developer",
+      "description": "The role will focus on designing, building, and maintaining cross-platform mobile applications.",
+      "location": "San Francisco, California",
+      "department": "IT",
+      "salary": "$100k-$140k",
+      "role": "App Developer",
+      "experience": "2-5 years",
+      "company_name": "AppVance Labs"
+    },
+    {
+      "job_title": "Data Scientist",
+      "description": "The role involves analyzing complex datasets, building predictive models, and delivering actionable insights to stakeholders.",
+      "location": "Boston, Massachusetts",
+      "department": "IT",
+      "salary": "$110k-$150k",
+      "role": "Data Analyst",
+      "experience": "3-5 years",
+      "company_name": "InsightGenix"
+    },
+    {
+      "job_title": "DevOps Engineer",
+      "description": "Responsible for streamlining development processes, implementing CI/CD pipelines, and maintaining system reliability.",
+      "location": "Denver, Colorado",
+      "department": "IT",
+      "salary": "$90k-$130k",
+      "role": "System Engineer",
+      "experience": "3+ years",
+      "company_name": "CloudTrack Systems"
+  }
+  ]}
