@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>PR</title>
     <style>
-        body {
+  body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #18151533;
     text-align: justify;
@@ -45,7 +45,8 @@ header a {
 }
 
 main {
-    margin: 10px 200px;
+    width: 80%;
+    margin: auto;
     padding-top: 70px; /* Adjust for fixed header */
 }
 
@@ -53,6 +54,7 @@ main {
     margin: 20px;
     display: grid;
     grid-template-columns: auto 1fr; /* Two columns layout */
+    grid-template-rows: 1fr;
     column-gap: 20px;
 }
 
@@ -94,6 +96,7 @@ main {
 .projects-grid, .schools-grid, .blogs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-rows: 1fr;
     gap: 30px;
 }
 
@@ -201,6 +204,11 @@ main {
 #contact-container {
     text-align: center;
     padding: 30px 0 60px 0; 
+}
+
+footer{
+    width: 80%;
+    margin: auto;
 }
 
 .contact-image {
@@ -363,7 +371,8 @@ section[id] {
                 </div>
             </div>
         </article>
-
+    </main>
+    <footer>
         <article id="contact">
             <h2 class="title">Contact</h2>
             <div id="contact-container">
@@ -374,10 +383,7 @@ section[id] {
                 <a href="https://www.github.com/" target="_blank"><img class="contact-image" src="https://i.ibb.co/ygNK7HH/Github.png" alt="Github Image"></a>
             </div>
         </article>
-    </main>
-    <footer>
                         <p>&copy; 2024 PREETHI REDDY. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
